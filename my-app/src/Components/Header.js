@@ -18,7 +18,7 @@ const Header = () => {
     toast.success("logout success")
   };
   return (
-  
+  <div className=' sticky z-50 top-0'> 
    <nav className="bg-gradient-to-r from-violet-600 to-indigo-600 p-4">
     {currentUser ? (
 
@@ -82,6 +82,7 @@ const Header = () => {
     }
 
 </nav>
+</div>
  
   )
 }
