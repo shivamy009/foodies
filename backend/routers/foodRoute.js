@@ -1,5 +1,5 @@
 const express = require('express');
-const { createFood, getAllfood, getsinglefood, updateFood, deleteFood } = require('../controllers/foodController');
+const { createFood, getAllfood, getsinglefood, updateFood, deleteFood, filterFood } = require('../controllers/foodController');
 const { requireSignin, isadmin } = require('../middleware/authMiddleware');
 const router= express.Router();
 
@@ -21,6 +21,10 @@ router.put('/updatefood/:id',requireSignin,isadmin,updateFood)
 
 router.delete('/deletefood/:id',requireSignin,isadmin,deleteFood)
 
+
+//filter product
+
+router.post('/food-filter',filterFood)
 
 
 module.exports=router;

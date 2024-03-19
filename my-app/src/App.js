@@ -20,6 +20,7 @@ import Updateshop from './pages/admin/Updateshop';
 import CreateProduct from './pages/admin/CreateProduct';
 import Updatefood from './pages/admin/Updatefood';
 import Mycart from './pages/user/Mycart';
+import Menu from './pages/Menu';
 
  
  
@@ -51,6 +52,8 @@ function App() {
     <Route path='/register' element={<Signup/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/about' element={<About/>}/>
+    <Route path='/menu' element={<Menu/>}/>
+
      <Route path='*' element={<Pagesnotfound/>}/>
    </Routes>
 

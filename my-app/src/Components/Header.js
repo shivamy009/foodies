@@ -16,6 +16,7 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.clear();
     toast.success("logout success")
+    
   };
   return (
   <div className=' sticky z-50 top-0'> 

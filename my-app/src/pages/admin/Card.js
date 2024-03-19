@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 // import { useParams } from 'react-router-dom';
 
-const Card = ({productName,description,price,quantity,id,photo}) => {
+const Card = () => {
   // const {id}=useParams();
   const {currentUser}= useSelector((state)=>state.user)
   const navigate = useNavigate()
