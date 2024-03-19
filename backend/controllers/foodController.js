@@ -158,3 +158,29 @@ exports.deleteFood = async(req,res)=>{
 
 
 }
+
+// filter product
+
+exports.filterFood=async(req,res)=>{
+    try{
+       const {radio}=req.body;
+       let arg={};
+       if(radio.length) arg.price = {$gte: radio[0] , $lte:radio[1]}
+       const products = await Food.find(arg)
+
+       return res.status(200).json({
+        success:true,
+        message:"Data filter success",
+        products
+       })
+
+    }
+    catch(err){
+        console.log(err)
+        return res.status(400).json({
+            success:false,
+            message:"Error white filter product ",
+            err:err.message
+        })
+    }
+}
